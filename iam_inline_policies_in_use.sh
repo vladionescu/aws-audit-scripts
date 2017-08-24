@@ -1,3 +1,4 @@
+#!/bin/bash
 # Accepts newline delimited AWS profiles from STDIN (piped input works well).
 PROFILES=$(cat -)
 
