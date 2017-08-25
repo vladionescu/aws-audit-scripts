@@ -10,7 +10,7 @@ for PROFILE in $PROFILES; do
         LOGGING_POLICY=$(aws --profile ${PROFILE} s3api get-bucket-logging --bucket ${BUCKET})
     
         if [ -z "${LOGGING_POLICY}" ]; then
-            echo "$PROFILE $BUCKET $LOGGING_POLICY"
+            echo "$PROFILE $BUCKET"
         fi
     done
 done
