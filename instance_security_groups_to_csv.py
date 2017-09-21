@@ -16,20 +16,16 @@ args = parser.parse_args()
 Get a JSON string of instances and their SGs, looks like:
 [
     {
-      "Instance": "ipsec.prod",
+      "Instance": "bastion",
       "SGs": [
-	"cross_region_ipsec_access",
-	"infra_bastion"
+	"sg-allow-ssh",
       ]
     },
     {
-      "Instance": "prod.middleware-a",
+      "Instance": "web1",
       "SGs": [
-	"middleware-a_prod",
-	"devops_all",
-	"activemq_in",
-	"internal_allow_all",
-	"dc_allow_all"
+	"sg-allow-http",
+	"sg-allow-mysql"
       ]
     }
 ]
