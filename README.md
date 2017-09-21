@@ -1,7 +1,8 @@
 # AWS Audit Scripts
 
-You should install awscli and jq before using these. These will accept input
-from STDIN, making them amenable to receiving piped input.
+You should install awscli and jq before using these. Bash scripts accept input
+from STDIN, making them amenable to receiving piped input. Python scripts take
+command line arguments.
 
 | Script        | Purpose       |
 | ------------- |:-------------:|
@@ -12,10 +13,11 @@ from STDIN, making them amenable to receiving piped input.
 | s3_buckets_logging_disabled.sh | Find S3 buckets with access logging disabled. |
 | s3_buckets_world_writeable.sh | Find S3 buckets allowing world (everyone) write access. |
 | s3_buckets_world_readable.sh | Find S3 buckets allowing world (everyone) read access. |
+| instance_security_groups_to_csv.py | Get a CSV matrix of instances and their SGs. |
 
 ## Example Usage
 
-The scripts accept a newline delimited list of profiles to run against via
+Bash scripts accept a newline delimited list of profiles to run against via
 STDIN. Profiles are the same ones stored in ~/.aws/credentials and
 ~/.aws/config.
 
@@ -33,3 +35,6 @@ personal-site personal-site-bucket-1
 $ ls
 list_of_profiles    s3_buckets_logging_disabled.sh  s3_buckets_logging_disabled.out
 ```
+
+Python scripts use argparse and have their own functionality, use `-h` for
+details.

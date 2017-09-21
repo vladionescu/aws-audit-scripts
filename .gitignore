@@ -1,0 +1,6 @@
+*.tmp
+*.out
+*.log
+*.bak
+*.csv
+*.swp
